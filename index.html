@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roadmap Comercial Antidots</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #121212;
+      margin: 40px;
+      color: #f1f1f1;
+    }
+
+    .timeline-horizontal {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+      padding-top: 60px;
+    }
+
+    .timeline-horizontal::before {
+      content: '';
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: #333;
+      z-index: 0;
+    }
+
+    .timeline-item {
+      background: #1f1f1f;
+      padding: 16px 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.6);
+      text-align: center;
+      width: 160px;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.8);
+    }
+
+    .timeline-item h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .timeline-item p {
+      font-size: 14px;
+      color: #aaa;
+      margin: 0;
+    }
+
+    .timeline-item::after {
+      content: '';
+      width: 14px;
+      height: 14px;
+      background: #121212;
+      border: 3px solid #555;
+      border-radius: 50%;
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    @media (max-width: 800px) {
+      .timeline-horizontal {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .timeline-horizontal::before {
+        top: 0;
+        left: 50%;
+        width: 4px;
+        height: 100%;
+      }
+
+      .timeline-item::after {
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline-horizontal">
+    <div class="timeline-item">
+      <h3>09h</h3>
+      <p>Início do dia<br>Checagem rápida</p>
+    </div>
+    <div class="timeline-item">
+      <h3>09h15</h3>
+      <p>Reunião rápida<br>15 min de alinhamento</p>
+    </div>
+    <div class="timeline-item">
+      <h3>09h30</h3>
+      <p>Limpeza CRM<br>Atualização e organização</p>
+    </div>
+    <div class="timeline-item">
+      <h3>10h</h3>
+      <p>Planejamento da semana</p>
+    </div>
+    <div class="timeline-item">
+      <h3>10h20</h3>
+      <p>Divisão de canais e papéis</p>
+    </div>
+    <div class="timeline-item">
+      <h3>10h40</h3>
+      <p>Criação de scripts e abordagens</p>
+    </div>
+    <div class="timeline-item">
+      <h3>11h10</h3>
+      <p>Organização do calendário</p>
+    </div>
+  </div>
+</body>
+</html>
